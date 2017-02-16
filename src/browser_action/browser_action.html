@@ -9,16 +9,16 @@
     </head>
     <body style="width:650px;">
         <div class="row">
-            <ul id="control_panel" class="accordion" data-accordion data-multi-expand="true">
-                <li class="accordion-item is-active" data-accordion-item>
+            <ul id="control_panel" class="accordion" data-accordion data-allow-all-closed="true">
+                <li class="accordion-item" data-accordion-item>
                     <a href="#" class="accordion-title">Background-color</a>
                     <div class="accordion-content" data-tab-content>
                         <div class="row">
-                            <div class="large-12 medium-12 columns"><h4>threshold</h4></div>
+                            <div class="large-12 medium-12 columns"><h5>threshold</h5></div>
                         </div>
                         <div class="row">
                             <div class="small-10 columns">
-                                <div class="slider" data-slider data-initial-start="50">
+                                <div class="slider" data-slider data-initial-start="50" id="background-threshold">
                                     <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="background-color-threshold-slider"></span>
                                     <span class="slider-fill" data-slider-fill></span>
                                 </div>
@@ -28,11 +28,11 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="large-12 medium-12 columns"><h4>weight</h4></div>
+                            <div class="large-12 medium-12 columns"><h5>weight</h5></div>
                         </div>
                         <div class="row">
                             <div class="small-10 columns">
-                                <div class="slider" data-slider data-initial-start="50">
+                                <div class="slider" data-slider data-initial-start="50" id="background-weight">
                                     <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="background-color-weight-slider"></span>
                                     <span class="slider-fill" data-slider-fill></span>
                                 </div>
@@ -43,26 +43,85 @@
                         </div>                        
                     </div>
                 </li>
-                <li class="accordion-item is-active" data-accordion-item>
+                <li class="accordion-item" data-accordion-item>
                     <a href="#" class="accordion-title">Text-color</a>
                     <div class="accordion-content" data-tab-content>
+                        <div class="row">
+                            <div class="large-12 medium-12 columns"><h5>threshold</h5></div>
+                        </div>
+                        <div class="row">
+                            <div class="small-10 columns">
+                                <div class="slider" data-slider data-initial-start="50" id="text-threshold">
+                                    <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="text-color-threshold-slider"></span>
+                                    <span class="slider-fill" data-slider-fill></span>
+                                </div>
+                            </div>
+                            <div class="small-2 columns">
+                                <input type="number" id="text-color-threshold-slider">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 medium-12 columns"><h5>weight</h5></div>
+                        </div>
+                        <div class="row">
+                            <div class="small-10 columns">
+                                <div class="slider" data-slider data-initial-start="50" id="text-weight">
+                                    <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="text-color-weight-slider"></span>
+                                    <span class="slider-fill" data-slider-fill></span>
+                                </div>
+                            </div>
+                            <div class="small-2 columns">
+                                <input type="number" id="text-color-weight-slider">
+                            </div>
+                        </div>                        
                     </div>
                 </li>
-                <li class="accordion-item is-active" data-accordion-item>
+                <li class="accordion-item" data-accordion-item>
                     <a href="#" class="accordion-title">Border</a>
                     <div class="accordion-content" data-tab-content>
+                        <div class="row">
+                            <div class="large-12 medium-12 columns"><h5>threshold</h5></div>
+                        </div>
+                        <div class="row">
+                            <div class="small-10 columns">
+                                <div class="slider" data-slider data-initial-start="50" id="border-threshold">
+                                    <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="border-color-threshold-slider"></span>
+                                    <span class="slider-fill" data-slider-fill></span>
+                                </div>
+                            </div>
+                            <div class="small-2 columns">
+                                <input type="number" id="border-color-threshold-slider">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 medium-12 columns"><h5>weight</h5></div>
+                        </div>
+                        <div class="row">
+                            <div class="small-10 columns">
+                                <div class="slider" data-slider data-initial-start="50" id="border-weight">
+                                    <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="border-color-weight-slider"></span>
+                                    <span class="slider-fill" data-slider-fill></span>
+                                </div>
+                            </div>
+                            <div class="small-2 columns">
+                                <input type="number" id="border-color-weight-slider">
+                            </div>
+                        </div>                        
                     </div>
                 </li>                
             </ul>
             
         </div>
         <div class="row">
-            <div class="large-6 medium-6 columns">
+            <div class="large-4 medium-4 columns">
                 <a href="#" id="apply_btn" class="button">Apply</a>
             </div>
-            <div class="large-6 medium-6 columns">
+            <div class="large-4 medium-4 columns">
                 <a href="#" id="undo_btn" class="button">Undo</a>
             </div>
+            <div class="large-4 medium-4 columns">
+                <a href="#" id="save_btn" class="button">Save</a>
+            </div>            
         </div>
     </body>
 </html>
