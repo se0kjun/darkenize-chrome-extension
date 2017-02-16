@@ -25,6 +25,7 @@
     "contentSettings",
     "contextMenus",
     "tabs",
+    "storage",
     "<all_urls>"
   ],
   "content_scripts": [
