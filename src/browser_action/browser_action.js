@@ -9,11 +9,13 @@ window.addEventListener('DOMContentLoaded', function(d) {
         var matches = tabs[0].url.match(/^https?\:\/\/([^\/:?#]+)(?:[\/:?#]|$)/i);
         var domain = (matches && matches[1]);
         chrome.storage.sync.get(domain, function(items){
-            config = items[domain].value;
-            Object.keys(items[domain].value).forEach(function(elem) {
-                var slider1 = new Foundation.Slider( $("#" + elem + "-" + "threshold"), {initialStart: items[domain].value[elem].threshold});
-                var slider2 = new Foundation.Slider( $("#" + elem + "-" + "weight"), {initialStart: items[domain].value[elem].weight});
-            });
+            if (items[domain] !== undefined) {
+                config = items[domain].value;
+                Object.keys(items[domain].value).forEach(function(elem) {
+                    var slider1 = new Foundation.Slider( $("#" + elem + "-" + "threshold"), {initialStart: items[domain].value[elem].threshold});
+                    var slider2 = new Foundation.Slider( $("#" + elem + "-" + "weight"), {initialStart: items[domain].value[elem].weight});
+                });
+            }
         });
     });
 
